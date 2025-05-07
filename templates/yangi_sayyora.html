@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yangi Sayyora Yaratish</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<style>
+    
+</style>
+<body>
+    <div class="container">
+        <h1>Yangi Sayyorani Yaratish</h1>
+        <form method="POST">
+
+            <input type="text" name="sayyora_nomi" placeholder="Sayyora nomini kiriting" required/>
+            <input type="text" name="sayyora_joylashuvi" placeholder="Sayyora joylashuvini kiriting" required/>
+            <input type="text" name="sayyora_haqida" placeholder="Sayyora haqida kiriting" required/>
+            <button type="sub\mit">Saqlash</button>
+        </form>
+        <hr class="divider">
+        <a href="{{ url_for('index') }}" class="button back-link">Ortga</a>
+    </div>
+</body>
+</html>

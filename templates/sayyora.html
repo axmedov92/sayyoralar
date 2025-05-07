@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{info["sayyora_nomi"]}} - Sayyora</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h2>Sayyora: {{info["sayyora_nomi"]}}</h2>
+        <p><strong>Joylashuvi:</strong> {{info["sayyora_joylashuvi"]}}</p>
+        <p><strong>Haqida:</strong> {{info["sayyora_haqida"]}}</p>
+        <hr class="divider">
+        <a href="{{ url_for('index') }}" class="button back-link">Ortga</a>
+    </div>
+</body>
+</html>

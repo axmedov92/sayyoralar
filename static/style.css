@@ -1,0 +1,172 @@
+/* Cyberpunk Cosmic Style */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: #0a0a1a; /* Very dark blue/purple */
+    color: #00ffff; /* Neon Cyan text */
+    font-family: 'Roboto Mono', monospace; /* Monospaced font for a terminal feel */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Subtle cyan glow */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for headings */
+    color: #ff00ff; /* Neon Magenta */
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 15px #ff00ff; /* Stronger magenta glow */
+    border-bottom: 1px solid rgba(255, 0, 255, 0.3); /* Faint magenta underline */
+    padding-bottom: 5px;
+}
+
+a {
+    color: #00ff00; /* Neon Lime Green */
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.7);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #ffffff; /* White on hover */
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff; /* White glow on hover */
+}
+
+.container { /* Optional container for content sections */
+    border: 1px solid rgba(0, 255, 255, 0.2); /* Faint cyan border */
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1) inset; /* Inner cyan glow */
+    max-width: 800px; /* Optional: Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto; /* Center the container */
+}
+
+h1 {
+    text-align: center; /* Center main headings */
+    margin-bottom: 30px;
+}
+
+h2 { /* Adjust planet name heading */
+    margin-bottom: 5px; /* Less space below planet name */
+}
+/* Form Elements */
+input[type="text"],
+button {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    border: 1px solid #ff00ff; /* Magenta border */
+    color: #00ffff; /* Cyan text */
+    padding: 10px 15px;
+    margin-bottom: 15px; /* Spacing below inputs */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    display: block; /* Make inputs take full width */
+    width: calc(100% - 32px); /* Adjust width considering padding */
+    box-shadow: 0 0 5px rgba(255, 0, 255, 0.3) inset; /* Inner magenta glow */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #00ffff; /* Cyan border on focus */
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5) inset, 0 0 5px rgba(0, 255, 255, 0.3); /* Stronger inner and outer cyan glow */
+}
+
+button {
+    cursor: pointer;
+    background-color: rgba(255, 0, 255, 0.3); /* Slightly stronger magenta */
+    width: auto; /* Allow button to size based on content */
+    display: inline-block; /* Align button nicely */
+    text-shadow: 0 0 3px rgba(255, 0, 255, 0.7);
+    margin-top: 10px; /* Add some space above buttons */
+}
+
+button:hover, button:focus {
+    background-color: rgba(255, 0, 255, 0.6);
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+    border-color: #ffffff;
+}
+
+/* Link styled as button */
+a.button {
+    display: inline-block;
+    background-color: rgba(0, 255, 255, 0.3); /* Cyan background */
+    border: 1px solid #00ffff; /* Cyan border */
+    color: #00ffff; /* Cyan text */
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 255, 255, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+a.button:hover, a.button:focus {
+    background-color: rgba(0, 255, 255, 0.6);
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+    border-color: #ffffff;
+}
+
+/* Specific button styles */
+a.button-danger { /* For delete link */
+    background-color: rgba(255, 0, 0, 0.3); /* Red background */
+    border-color: #ff0000; /* Red border */
+    color: #ff0000; /* Red text */
+    text-shadow: 0 0 3px rgba(255, 0, 0, 0.7);
+    font-size: 0.9em; /* Make delete slightly smaller */
+    padding: 5px 10px;
+}
+
+a.button-danger:hover, a.button-danger:focus {
+    background-color: rgba(255, 0, 0, 0.6);
+    border-color: #ff4d4d;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.planet-entry {
+    border: 1px dashed rgba(255, 0, 255, 0.2); /* Dashed magenta border */
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out name and delete button */
+    align-items: center; /* Vertically align items */
+}
+
+.planet-entry h2 { /* Target planet name within entry */
+     margin-bottom: 0; /* Remove bottom margin */
+     border-bottom: none; /* Remove the default heading underline here */
+     padding-bottom: 0;
+}
+
+.planet-link h2 { /* Style the planet name link */
+    color: #ff00ff; /* Keep magenta color */
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    border-bottom: none; /* Ensure no underline */
+    padding-bottom: 0;
+}
+
+.planet-link:hover h2, .planet-link:focus h2 {
+    color: #ffffff; /* White on hover */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; /* White glow on hover */
+}
+
+.divider { /* Style for the horizontal rule */
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(0, 255, 255, 0.5), rgba(0, 255, 255, 0)); /* Fading cyan line */
+    margin: 25px 0;
+}
+
+/* Specific link classes if needed */
+.add-link {}
+.back-link {}
+.delete-link {}
